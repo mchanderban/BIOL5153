@@ -5,13 +5,13 @@ melissa.ny.ok@gmail.com
 
 ## Education
 
-**University of Arkansas**, Fayetteville, AR
+### **University of Arkansas**, Fayetteville, AR
 
 Ph.D. Student in Cell and Molecular Biology
 
 2017-Present
 
-**University of Oklahoma**, Norman, OK
+### **University of Oklahoma**, Norman, OK
 
 Bachelor of Science in Microbiology
 
@@ -21,7 +21,7 @@ Bachelor of Science in Microbiology
 
 ## Relevant Experience
 
-**Graduate Student**
+### **Graduate Student**
 
 July 2017 - Present
 
@@ -36,7 +36,7 @@ Principal Investigator: Dr. Daniel Lessner
 * Performing characterization of methanogen nitrogenases
 
 
-**Undergraduate Researcher**
+### **Undergraduate Researcher**
 
 August 2014-July 2017
 
@@ -53,7 +53,7 @@ Principal Investigator: Dr. Elizabeth Karr
 - Characterized importance of cysteine residues in redox-sensitive transcription regulator exclusive to methanogenic archaea
 
 
-**Summer Intern**
+### **Summer Intern**
 
 July 2015
 
@@ -66,7 +66,7 @@ Price Family Foundation Institute of Structural Biology
 - Performed anaerobic X-ray crystallography of proteins from hypervirulent *C. difficile*
 
 
-**Undergraduate Researcher**
+### **Undergraduate Researcher**
 
 November 2013-April 2014
 
