@@ -104,7 +104,7 @@ Principal Investigator: Dr. Chaunbin Mao
 
 ## Presentations
 
-- ** Chanderban M**, Karr EA. Functional analysis of a two-component system in a methanogen. OK-LSAMP Annual Research Symposium, Stillwater, OK, 2016.
+- **Chanderban M**, Karr EA. Functional analysis of a two-component system in a methanogen. OK-LSAMP Annual Research Symposium, Stillwater, OK, 2016.
 
 - **Chanderban M**, Isom CE, Bourne PC, West AH, Richter-Addo GB, Karr EA. Elucidating the Role of YtrA-Like Transcription Regulators in Hypervirulent *Clostridium difficile*. Annual Undergraduate Summer Symposium, Norman, OK, 2016.
 
