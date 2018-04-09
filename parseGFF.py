@@ -2,8 +2,14 @@
 
 from Bio import SeqIO
 
+from Bio import SeqIO
+genome = SeqIO.read("watermelon.fsa", "fasta")
+
+# print(genome.seq)
+
 # read and store genome
-genome = open("watermelon.fsa").read()
+# genome = open("watermelon.fsa").read()
+# genome = list(SeqIO.parse("watermelon.fsa", "fasta"))
 
 # open GFF file
 watermelon = open("watermelon.gff")
@@ -14,9 +20,9 @@ for line in watermelon:
 	coordinates = line.split("\t")
 # define start and end coordinates as integers
 # add 194 to each (length of header in genome file)
-	start = int(coordinates[3]) + 194
+	start = int(coordinates[3]) - 1
 # add 1 to end so it includes last nucleotide
-	end = int(coordinates[4]) + 195
+	end = int(coordinates[4])
 # define organism name
 	name = (coordinates[0])
 # define gene info
@@ -28,7 +34,8 @@ for line in watermelon:
 # print organism name, gene name, and sequence
 # replace spaces with underscore in header
 # add newline between header and sequence
-	print(">" + header.replace(" ", "_") + "\n" +  genome[start:end])
+	print(">" + header.replace(" ", "_") + "\n" +  genome.seq[start:end])
+
 
 # close GFF file
 watermelon.close()
