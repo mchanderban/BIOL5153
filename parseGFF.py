@@ -6,25 +6,23 @@ from Bio import SeqIO
 genome = open("watermelon.fsa").read()
 
 # open GFF file
-
-# read it in line by line
-
-	# split string on tab into list 
-# use start and end coordinates to extract from genome
-
-
-# open GFF file
 watermelon = open("watermelon.gff")
 
-import sys
+# read GFF file line by line using for loop
 for line in watermelon:
 # split string into list based on tabs
 	coordinates = line.split("\t")
-	start = int(coordinates[3])
-	end = int(coordinates[4])
+# define start and end coordinates as integers
+# add 194 to each (length of header in genome file)
+	start = int(coordinates[3]) + 194
+# add 1 to end so it includes last nucleotide
+	end = int(coordinates[4]) + 195
+# define organism name
 	name = (coordinates[0])
+# define gene name
 	gene = (coordinates[8])
-	print(">" + name + gene + genome[start:end])
+# print organism name, gene name, and sequence
+	print(">" + name + " " + gene + genome[start:end])
 
 # close GFF file
 watermelon.close()
