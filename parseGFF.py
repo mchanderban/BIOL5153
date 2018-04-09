@@ -1,27 +1,38 @@
 #!/usr/bin/env python3
 
-from Bio import SeqIO
+import argparse
+
+# create an ArgumentParser object ('parser') that will hold all the info necessary to parse the command line
+parser = argparse.ArgumentParser(description="This script extracts sequences from FASTA file based on coordinates")
+
+# use the add_argument() method to add a positional argument
+
+parser.add_argument("fasta", help="name of FASTA file")
+
+parser.add_argument("gff", help="name of GFF file")
+
+# parse the arguments
+args = parser.parse_args()
+
+print("We're gonna open this FASTA file:", args.fasta)
+
+print("Open this GFF file:", args.gff)
+
+#######################
 
 from Bio import SeqIO
-genome = SeqIO.read("watermelon.fsa", "fasta")
-
-# print(genome.seq)
-
-# read and store genome
-# genome = open("watermelon.fsa").read()
-# genome = list(SeqIO.parse("watermelon.fsa", "fasta"))
+fasta = SeqIO.read(args.fasta, "fasta")
 
 # open GFF file
-watermelon = open("watermelon.gff")
+gff = open(args.gff)
 
 # read GFF file line by line using for loop
-for line in watermelon:
+for line in gff:
 # split string into list based on tabs
 	coordinates = line.split("\t")
 # define start and end coordinates as integers
-# add 194 to each (length of header in genome file)
+# subtract one from start because genome has 1-based numbering
 	start = int(coordinates[3]) - 1
-# add 1 to end so it includes last nucleotide
 	end = int(coordinates[4])
 # define organism name
 	name = (coordinates[0])
@@ -34,8 +45,5 @@ for line in watermelon:
 # print organism name, gene name, and sequence
 # replace spaces with underscore in header
 # add newline between header and sequence
-	print(">" + header.replace(" ", "_") + "\n" +  genome.seq[start:end])
+	print(">" + header.replace(" ", "_") + "\n" +  fasta.seq[start:end])
 
-
-# close GFF file
-watermelon.close()
