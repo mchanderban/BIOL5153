@@ -19,10 +19,16 @@ for line in watermelon:
 	end = int(coordinates[4]) + 195
 # define organism name
 	name = (coordinates[0])
-# define gene name
+# define gene info
 	gene = (coordinates[8])
+# split gene info into list based on spaces so I can grab the gene name
+	gene_name = gene.split(" ")
+# put organism name and gene name together for header
+	header = name + " " + gene_name[1]
 # print organism name, gene name, and sequence
-	print(">" + name + " " + gene + genome[start:end])
+# replace spaces with underscore in header
+# add newline between header and sequence
+	print(">" + header.replace(" ", "_") + "\n" +  genome[start:end])
 
 # close GFF file
 watermelon.close()
