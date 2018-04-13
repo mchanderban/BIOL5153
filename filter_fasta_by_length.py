@@ -25,5 +25,5 @@ print("filter sequences less than", args.min_seq_length, "nt in length")
 fasta = SeqIO.parse(args.fasta, "fasta")
 
 for sequence in fasta:
-	if len(sequence) >= args.min_seq_length:
+	if len(sequence.seq) > args.min_seq_length:
 		print(sequence.format("fasta"))
